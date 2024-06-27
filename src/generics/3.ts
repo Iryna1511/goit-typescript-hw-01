@@ -1,7 +1,3 @@
-type Obj = {
-  [key: string]: any;
-};
-
-function merge(objA: Obj, objB: Obj): Obj {
+function merge<T extends object, U extends object>(objA: T, objB: U): T & U {
   return Object.assign(objA, objB);
 }
